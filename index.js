@@ -265,13 +265,24 @@ axios.get(`https://st4rz.herokuapp.com/api/tiktok?url=${tictoc}`).then((res) => 
 conn.sendMessage(id, titoe, MessageType.text);
 })
 }
-if (text.includes("!wikia")){
-const teks = text.replace(/!wikia /, "")
-axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${text}`).then((res) => {
-    let hasil = `Menurut Wikipedia:\n\n${res.data.result}`;
-    conn.sendMessage(id, hasil ,MessageType.text);
+if (text.includes("!wiki")) {
+const wiki = async (url) => new Promise((resolve, reject) => {
+
+    axios.get(`${link}/api/wiki?q=${url}`)
+
+    .then((res) => {
+
+        resolve(res.data.result)
+
+    })
+
+    .catch((err) =>{
+
+        reject(err)
+
+    })
+
 })
-}
 if (text.includes("!sholat")){
   const teks = text.replace(/!sholat /, "")
   axios.get(`https://mhankbarbar.herokuapp.com/api/jadwalshalat?daerah=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then ((res) =>{
