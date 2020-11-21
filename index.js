@@ -12,8 +12,10 @@ const menu = require("./lib/menu.js");
 const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
+const resep = require("./lib/resep.js");
+const kataskasar = require("./lib/katakasar.js");
 /////////////////
-const BotName = 'LL BOT☄'; 
+const BotName = 'LL BOT'; 
 const instagram = 'https://instagram.com/ll_bot11'; 
 const telegram = '-'; 
 const kapanbotaktif = 'KETIKA HANYA DIAKTIFKAN'; 
