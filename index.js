@@ -203,29 +203,6 @@ axios.get(`https://st4rz.herokuapp.com/api/yta?url=${teks}`).then((res) => {
 })
 }
 
-if (text.includes("!stalkig")){
-const teks = text.replace(/!stalkig /, "")
-axios.getconst stalkig = async (url) => new Promise((resolve, reject) => {
-
-    axios.get(`${link}/api/stalk?username=${url}`)
-
-    .then((res) => {
-
-		if (res.data.error) resolve(res.data.error)
-
-        const text = `User: ${res.data.Username}\nName: ${res.data.Name}\nBio: ${res.data.Biodata}\nFollower: ${res.data.Jumlah_Followers}\nFollowing: ${res.data.Jumlah_Following}\nPost: ${res.data.Jumlah_Post}`
-
-        resolve(text)
-
-    })
-
-    .catch((err) =>{
-
-        reject(err)
-
-    })
-
-})
 
 if (text.includes("!yt")){
 const teks = text.replace(/!yt /, "")
